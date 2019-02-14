@@ -40,24 +40,17 @@
 
     self.loadingWebView = [[WKWebView alloc] initWithFrame:self.view.bounds];
     self.loadingWebView.backgroundColor = backgroundColor;
-//    self.loadingWebView.navigationDelegate = self;
     self.loadingWebView.hidden = NO;
     [self.loadingWebView loadHTMLString:loadingString baseURL:nil];
     [self.view addSubview:self.loadingWebView];
-    
+
     self.closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    
-//    button.layer.cornerRadius = 30;
-    //    button.layer.borderColor = bgColor.CGColor;
-    //    button.layer.borderWidth = 1;
-//    [self.closeButton setBackgroundColor:[UIColor redColor]];
     [self.closeButton addTarget:self action:@selector(closePressed) forControlEvents:UIControlEventTouchUpInside];
     [self.closeButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     [self.closeButton setTitle:@"x" forState:UIControlStateNormal];
     [self.closeButton.titleLabel setFont:[UIFont systemFontOfSize:20 weight:UIFontWeightBold]];
     [self.closeButton setFrame:CGRectMake(self.view.frame.size.width - 40, 40, 40, 40)];
     [self.view addSubview:self.closeButton];
-//    return button;
 
 //    self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
 //    [self.view addSubview:self.spinner];
@@ -139,15 +132,10 @@
       @"paymentCurrencies": @{
               @"type": @"object",
               @"required": @NO
-              },
-//      @"onPaymentRequest": @{
-//              @"type": @"function",
-//              @"required": @NO
-//              }
+              }
     };
 
     for(id key in propDefinitions) {
-//        NSLog(@"key=%@ value=%@", key, [propDefinitions objectForKey:key]);
         if(self.options[key]) {
             opts[key] = self.options[key];
         }
