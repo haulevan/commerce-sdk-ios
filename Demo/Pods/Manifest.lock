@@ -1,0 +1,23 @@
+PODS:
+  - Bidali-iOS-SDK (0.0.1):
+    - WebViewJavascriptBridge (~> 6.0)
+  - WebViewJavascriptBridge (6.0.3)
+
+DEPENDENCIES:
+  - Bidali-iOS-SDK (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - WebViewJavascriptBridge
+
+EXTERNAL SOURCES:
+  Bidali-iOS-SDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Bidali-iOS-SDK: 6161bc79e334b1ed007f887dfcd159a8a7a9c087
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
+
+PODFILE CHECKSUM: 9879606f83353087bb4360d729e258c1e4794aac
+
+COCOAPODS: 1.5.3
