@@ -43,7 +43,7 @@
     
     NSArray *buttons = @[
         [self buttonWithTitle:@"Buy Giftcards" selector:@selector(defaultOptions)],
-        [self buttonWithTitle:@"Bitcoin Only" selector:@selector(vergeOnly)],
+        [self buttonWithTitle:@"Bitcoin Only" selector:@selector(btcOnly)],
     ];
 
     for(UIButton *button in buttons) {
