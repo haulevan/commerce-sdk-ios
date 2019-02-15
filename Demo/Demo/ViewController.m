@@ -43,8 +43,7 @@
     
     NSArray *buttons = @[
         [self buttonWithTitle:@"Buy Giftcards" selector:@selector(defaultOptions)],
-        // [self buttonWithTitle:@"Pay via API" selector:@selector(paymentViaAPI)],
-//        [self buttonWithTitle:@"Buy Giftcards with Verge" selector:@selector(vergeOnly)],        
+        [self buttonWithTitle:@"Bitcoin Only" selector:@selector(vergeOnly)],
     ];
 
     for(UIButton *button in buttons) {
@@ -57,38 +56,27 @@
 - (void)defaultOptions {
     NSDictionary *options = @{
                               @"env": @"local",
-                              @"apiKey": @"1234",
-                              @"onOrderCreated": ^{
-                                  NSLog(@"orderCreated! in clients code!");
-                              },
-                              @"onPaymentRequest": ^(NSString *quote){
-                                  NSLog(@"onPaymentRequest! in clients code! %@", quote);
-                                  UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Buy this gift card with ETH"
-                                                                                                 message:@""
-                                                                                          preferredStyle:UIAlertControllerStyleActionSheet];
-                                  
-                                  UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                                                        handler:^(UIAlertAction * action) {}];
-                                  
-                                  [alert addAction:defaultAction];
-                                  [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
-                              }
+                              @"apiKey": @"1234"
                               };
-    [[BidaliSDK getInstance] show:self options:options];
+    
+    BidaliOnPaymentRequestCallback onPaymentRequest = ^(NSDictionary *paymentRequest){
+        NSLog(@"onPaymentRequest! in clients code! %@", paymentRequest);
+        NSString* title = [NSString stringWithFormat:@"Buy this gift card with %@ %@?", paymentRequest[@"amount"], paymentRequest[@"currency"]];
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
+                                                                       message:@""
+                                                                preferredStyle:UIAlertControllerStyleActionSheet];
+        
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {}];
+        
+        [alert addAction:defaultAction];
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+    };
+    
+    [[BidaliSDK getInstance] show:self options:options onPaymentRequest:onPaymentRequest];
 }
 
-- (void)paymentViaAPI {
-    NSDictionary *options = @{
-                              @"env": @"local",
-                              @"apiKey": @"1234",
-                              @"paymentType": @"api",
-                              @"onOrderCreated": ^{
-                                  NSLog(@"orderCreated! in clients code!");
-                              }};
-    [[BidaliSDK getInstance] show:self options:options];
-}
-
-- (void)bitcoinOnly {
+- (void)btcOnly {
     NSDictionary *options = @{
                               @"env": @"local",
                               @"apiKey": @"1234",
@@ -96,18 +84,22 @@
                               @"onOrderCreated": ^{
                                   NSLog(@"orderCreated! in clients code!");
                               }};
-    [[BidaliSDK getInstance] show:self options:options];
-}
-
-- (void)vergeOnly {
-    NSDictionary *options = @{
-                              @"env": @"local",
-                              @"apiKey": @"1234",
-                              @"paymentCurrencies": @[@"XVG"],
-                              @"onOrderCreated": ^{
-                                  NSLog(@"orderCreated! in clients code!");
-                              }};
-    [[BidaliSDK getInstance] show:self options:options];
+    
+    BidaliOnPaymentRequestCallback onPaymentRequest = ^(NSDictionary *paymentRequest){
+        NSLog(@"onPaymentRequest! in clients code! %@", paymentRequest);
+        NSString* title = [NSString stringWithFormat:@"Buy this gift card with %@ %@?", paymentRequest[@"amount"], paymentRequest[@"currency"]];
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
+                                                                       message:@""
+                                                                preferredStyle:UIAlertControllerStyleActionSheet];
+        
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {}];
+        
+        [alert addAction:defaultAction];
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+    };
+    
+    [[BidaliSDK getInstance] show:self options:options onPaymentRequest:onPaymentRequest];
 }
 
 @end

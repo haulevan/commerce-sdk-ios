@@ -4,7 +4,7 @@
   "summary": "Drop in Commerce SDK",
   "description": "This SDK enables cryptocurrency wallets to allow users to purchase in-app.",
   "homepage": "https://bidali.com",
-  "license": "Proprietary",
+  "license": "MIT",
   "authors": {
     "Bidali": "support@bidali.com"
   },

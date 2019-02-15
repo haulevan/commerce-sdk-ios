@@ -11,8 +11,60 @@
     return bidali_sdk;
 }
 
-- (void)show:(UIViewController *)controller options:(NSDictionary *)options {
-    BidaliWebViewController *webViewController = [[BidaliWebViewController alloc] initWithOptions:options];
+- (void)show:(UIViewController *)controller options:(NSDictionary *)options onPaymentRequest:(nonnull BidaliOnPaymentRequestCallback)onPaymentRequest {
+    NSDictionary *urls = @{
+                           @"local" : @"http://localhost:3009/embed",
+                           @"staging" : @"https://commerce.staging.bidali.com/embed",
+                           @"production" : @"https://commerce.bidali.com/embed"
+                           };
+    
+    NSMutableDictionary *opts = [NSMutableDictionary dictionary];
+    NSString *defaultEnv = @"production";
+    NSDictionary *propDefinitions = @{
+                                      @"env": @{
+                                              @"type": @"string",
+                                              @"required": @NO
+                                              },
+                                      @"apiKey": @{
+                                              @"type": @"string",
+                                              @"required": @NO
+                                              },
+                                      @"email": @{
+                                              @"type": @"string",
+                                              @"required": @NO
+                                              },
+                                      @"paymentType": @{
+                                              @"type": @"string",
+                                              @"required": @NO
+                                              },
+                                      @"paymentCurrencies": @{
+                                              @"type": @"object",
+                                              @"required": @NO
+                                              }
+                                      };
+    
+    for(id key in propDefinitions) {
+        if(options[key]) {
+            opts[key] = options[key];
+        }
+    }
+    
+    opts[@"platform"] = @{
+                          @"name" : @"ios",
+                          @"version":  [[UIDevice currentDevice] systemVersion],
+                          @"appVersion": [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey],
+                          @"appName": [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleNameKey],
+                          @"appId": [[NSBundle mainBundle] bundleIdentifier],
+                          };
+    
+    NSString *widgetUrl = urls[defaultEnv];
+    if(options[@"url"]) {
+        widgetUrl = options[@"url"];
+    } else if(opts[@"env"] && urls[opts[@"env"]]) {
+        widgetUrl = urls[opts[@"env"]];
+    }
+
+    BidaliWebViewController *webViewController = [[BidaliWebViewController alloc] initWithOptions:opts url:widgetUrl onPaymentRequest:onPaymentRequest];
     [controller presentViewController:webViewController animated:true completion:^{
         
     }];
