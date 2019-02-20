@@ -65,7 +65,6 @@
         }];
     }
     [_bridge registerHandler:@"onClose" handler:^(id data, WVJBResponseCallback responseCallback) {
-        NSLog(@"onClose called: %@", data);
         [self closePressed];
         responseCallback(@"Response from onClose");
     }];
@@ -80,9 +79,10 @@
         if ([application respondsToSelector:@selector(openURL:options:completionHandler:)]) {
             [application openURL:url options:@{}
                completionHandler:^(BOOL success) {
+                   
                }];
         } else {
-            BOOL success = [application openURL:url];
+            [application openURL:url];
         }
     }];
     
