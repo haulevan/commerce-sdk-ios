@@ -61,6 +61,7 @@
     
     BidaliOnPaymentRequestCallback onPaymentRequest = ^(NSDictionary *paymentRequest){
         NSLog(@"onPaymentRequest! in clients code! %@", paymentRequest);
+        //TODO: Also show chargeId / orderId and description
         NSString* title = [NSString stringWithFormat:@"Buy this gift card with %@ %@?", paymentRequest[@"amount"], paymentRequest[@"currency"]];
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
                                                                        message:@""
@@ -100,6 +101,10 @@
     };
     
     [[BidaliSDK getInstance] show:self options:options onPaymentRequest:onPaymentRequest];
+}
+
+- (bool)shouldAutorotate {
+    return false;
 }
 
 @end

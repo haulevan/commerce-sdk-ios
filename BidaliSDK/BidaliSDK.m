@@ -17,7 +17,6 @@
                            @"staging" : @"https://commerce.staging.bidali.com/embed",
                            @"production" : @"https://commerce.bidali.com/embed"
                            };
-    
     NSMutableDictionary *opts = [NSMutableDictionary dictionary];
     NSString *defaultEnv = @"production";
     NSDictionary *propDefinitions = @{
@@ -42,7 +41,7 @@
                                               @"required": @NO
                                               }
                                       };
-    
+
     for(id key in propDefinitions) {
         if(options[key]) {
             opts[key] = options[key];
@@ -50,13 +49,14 @@
     }
     
     opts[@"platform"] = @{
-                          @"name" : @"ios",
-                          @"version":  [[UIDevice currentDevice] systemVersion],
-                          @"appVersion": [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey],
-                          @"appName": [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleNameKey],
-                          @"appId": [[NSBundle mainBundle] bundleIdentifier],
-                          };
-    
+        @"appName": [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleNameKey],
+        @"appId": [[NSBundle mainBundle] bundleIdentifier],
+        @"osName" : @"ios",
+        @"osVersion":  [[UIDevice currentDevice] systemVersion],
+        @"appVersion": [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey],
+        @"locale": [[NSLocale currentLocale] localeIdentifier],
+    };
+
     NSString *widgetUrl = urls[defaultEnv];
     if(options[@"url"]) {
         widgetUrl = options[@"url"];
@@ -65,9 +65,7 @@
     }
 
     BidaliWebViewController *webViewController = [[BidaliWebViewController alloc] initWithOptions:opts url:widgetUrl onPaymentRequest:onPaymentRequest];
-    [controller presentViewController:webViewController animated:true completion:^{
-        
-    }];
+    [controller presentViewController:webViewController animated:true completion:nil];
 }
 
 - (void)close {

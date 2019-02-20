@@ -74,6 +74,18 @@
         NSLog(@"log called: %@", data);
     }];
     
+    [_bridge registerHandler:@"openUrl" handler:^(NSString* urlString, WVJBResponseCallback responseCallback) {
+        UIApplication *application = [UIApplication sharedApplication];
+        NSURL *url = [NSURL URLWithString:urlString];
+        if ([application respondsToSelector:@selector(openURL:options:completionHandler:)]) {
+            [application openURL:url options:@{}
+               completionHandler:^(BOOL success) {
+               }];
+        } else {
+            BOOL success = [application openURL:url];
+        }
+    }];
+    
     [_bridge registerHandler:@"readyForSetup" handler:^(id data, WVJBResponseCallback responseCallback) {
         [self.bridge callHandler:@"setupBridge" data:self.options];
     }];
