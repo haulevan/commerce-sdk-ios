@@ -1,5 +1,6 @@
 #import "BidaliSDK.h"
 #import "BidaliWebViewController.h"
+#import "BidaliConfig.h"
 
 @implementation BidaliSDK
 + (BidaliSDK *)getInstance {
@@ -47,14 +48,15 @@
             opts[key] = options[key];
         }
     }
-    
+
     opts[@"platform"] = @{
         @"appName": [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleNameKey],
         @"appId": [[NSBundle mainBundle] bundleIdentifier],
+        @"appVersion": [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey],
         @"osName" : @"ios",
         @"osVersion":  [[UIDevice currentDevice] systemVersion],
-        @"appVersion": [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey],
         @"locale": [[NSLocale currentLocale] localeIdentifier],
+        @"sdkVersion": BIDALI_SDK_VERSION,
     };
 
     NSString *widgetUrl = urls[defaultEnv];

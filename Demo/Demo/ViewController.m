@@ -62,7 +62,7 @@
     BidaliOnPaymentRequestCallback onPaymentRequest = ^(NSDictionary *paymentRequest){
         NSLog(@"onPaymentRequest! in clients code! %@", paymentRequest);
         //TODO: Also show chargeId / orderId and description
-        NSString* title = [NSString stringWithFormat:@"Buy this gift card with %@ %@?", paymentRequest[@"amount"], paymentRequest[@"currency"]];
+        NSString* title = [NSString stringWithFormat:@"%@ - %@ %@?\n\nchargeId: %@", paymentRequest[@"description"], paymentRequest[@"amount"], paymentRequest[@"currency"], paymentRequest[@"chargeId"]];
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
                                                                        message:@""
                                                                 preferredStyle:UIAlertControllerStyleActionSheet];
@@ -88,7 +88,7 @@
     
     BidaliOnPaymentRequestCallback onPaymentRequest = ^(NSDictionary *paymentRequest){
         NSLog(@"onPaymentRequest! in clients code! %@", paymentRequest);
-        NSString* title = [NSString stringWithFormat:@"Buy this gift card with %@ %@?", paymentRequest[@"amount"], paymentRequest[@"currency"]];
+        NSString* title = [NSString stringWithFormat:@"%@ - %@ %@?\n\nchargeId: %@", paymentRequest[@"description"], paymentRequest[@"amount"], paymentRequest[@"currency"], paymentRequest[@"chargeId"]];
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
                                                                        message:@""
                                                                 preferredStyle:UIAlertControllerStyleActionSheet];
