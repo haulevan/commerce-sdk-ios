@@ -3,117 +3,121 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		093282AF846B10CBFBBF444019EC35F6 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 478584E4CF317EA7029F3D1ED4F9E2D5 /* WebViewJavascriptBridge_JS.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1594DBE28BB0992DB78A99A709720B9A /* WebViewJavascriptBridge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0AEF1765FC735720FC747576ECC500 /* WebViewJavascriptBridge-dummy.m */; };
-		2030B685149FF1D2006F4507F16CACC0 /* BidaliConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = E42D45DB0D3C032FE6FA23D1DBDAA6A4 /* BidaliConfig.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		20F7225695D4B6FF96484E9708C8FE35 /* WebViewJavascriptBridgeBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 572B3F96AE74A1DF9BE4ECB776DF02E8 /* WebViewJavascriptBridgeBase.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2144B4DEBFCC58CC374070F3F85DC2D2 /* Bidali-iOS-SDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA060215A2142A6E23AB2744B6DF51FE /* Bidali-iOS-SDK-dummy.m */; };
-		2D55B767EC5B88097810005A54110ED2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B77A2945E85AFD828DA3402960CE6B2 /* WebKit.framework */; };
-		31EE50C8E4CF9E8796F93B292CF0B803 /* WebViewJavascriptBridge_JS.h in Headers */ = {isa = PBXBuildFile; fileRef = AF56544C3D7858204788853D31E7A1E7 /* WebViewJavascriptBridge_JS.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3498CB8155015987F1AF4F679E718819 /* BidaliConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D472500E00E444197AB85FB6AB72C6CE /* BidaliConfig.m */; };
-		3D067558530D8F7ADA77205A4065E842 /* Pods-Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA944E1D5D966DBCA7EB7C661855A95 /* Pods-Demo-dummy.m */; };
-		4DCBABE2635548AD3EC4EA33F5A4CC19 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = E3835D8C97A2063A6B3D2814E4496D09 /* WebViewJavascriptBridge.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4FB8CF17DD134B80EEB432D4C241B11B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1F10480955EA41CE990370E1E30820C /* UIKit.framework */; };
-		53CB62C3ABD4972E26C1971D5D192D2A /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3CBE405066B1C4C76231F81EF4332B /* WKWebViewJavascriptBridge.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		62BFFAC34E0AC57BB0C289342912A325 /* BidaliSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = DDFF5A3295E3FC7208125F92CA26F740 /* BidaliSDK.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6629F7FCA1A646F4ED5274638A133241 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B77A2945E85AFD828DA3402960CE6B2 /* WebKit.framework */; };
-		73040938B624975F8835E617532AD187 /* BidaliSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = B7D1FD3BD93FCB6CFEA1C6B75F6A354B /* BidaliSDK.m */; };
-		A83B1BC1C5661FB7E46A185326E24460 /* WebViewJavascriptBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = DB7CFE935B805145870C523ABC0E8FC8 /* WebViewJavascriptBridge.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		AA68B44EF0190542FDE0DCE18C8DFFD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1F10480955EA41CE990370E1E30820C /* UIKit.framework */; };
-		B8AA693C1700D7942DB51399C1ADFF3E /* BidaliWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3916DDCEF4AC9D6573CB0EBF801E9342 /* BidaliWebViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D1558C378240A9D16D7EB6966EF7C787 /* WKWebViewJavascriptBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = C74914E31C9C408845FEB70441B98117 /* WKWebViewJavascriptBridge.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E59D244C0B40FBBFF09F2EEC714786F6 /* BidaliWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5D65D68DAE907EB9AAEE015A84EE70 /* BidaliWebViewController.m */; };
-		F9CC7C10D64B3B93BC766BCE89A8B298 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B6AB78A6C1D4739F0460934CC9CD47 /* WebViewJavascriptBridgeBase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		07012EA7A0829D45F61641F626EBD34A /* WebViewJavascriptBridge_JS.h in Headers */ = {isa = PBXBuildFile; fileRef = AF56544C3D7858204788853D31E7A1E7 /* WebViewJavascriptBridge_JS.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		11203E06A7DC737493BD63C453DF4C3B /* BidaliWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EC44E5125FA0553838C0DDE4608D03 /* BidaliWebViewController.m */; };
+		24961D4E43821134FCA76328F75912C4 /* WebViewJavascriptBridgeBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 572B3F96AE74A1DF9BE4ECB776DF02E8 /* WebViewJavascriptBridgeBase.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2C9093AFB329F9B57BD808FC8A311930 /* WebViewJavascriptBridge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0AEF1765FC735720FC747576ECC500 /* WebViewJavascriptBridge-dummy.m */; };
+		313946E6D1A2A952C956DAE61DACD766 /* BidaliSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 936E7E7A1F1A61EA58142A71C5B20F6B /* BidaliSDK.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3343929810E144097EAE0C09107E888D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F7B5FF333708EC794092BD95D6D97A /* WebKit.framework */; };
+		3B746EB0BD87AF5B6DCB01A9CF530F1E /* BidaliSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E8D7970EAF31DC0F6673C353BEA6AD /* BidaliSDK.m */; };
+		3C4D5216BC70F7108A8F0CA2E03A9B46 /* BidaliWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A8609FA4D066B50C6A4F8ACD1B1D0FC /* BidaliWebViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		494B9D3350D376DCEE7E767F3A95FB1B /* BidaliConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B296FDC327B021934216676F7740511 /* BidaliConfig.m */; };
+		506BDD30F234B4BFE935CDC933C714B8 /* Bidali-iOS-SDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9BB9046ADA4DD01D262CD427DBFE89 /* Bidali-iOS-SDK-dummy.m */; };
+		5AAF1D467E19E1D5A63214BA360AA33F /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3CBE405066B1C4C76231F81EF4332B /* WKWebViewJavascriptBridge.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		88B455ABC6BD54EB85EE1FDCE886CBA4 /* WKWebViewJavascriptBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = C74914E31C9C408845FEB70441B98117 /* WKWebViewJavascriptBridge.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8CF6F27480FCFD0ECD2E7355693C426F /* Pods-Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA944E1D5D966DBCA7EB7C661855A95 /* Pods-Demo-dummy.m */; };
+		93BC764C63B103B131DBD320B0857176 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605A54AF00011802AEC283DBEE747448 /* UIKit.framework */; };
+		9621472D0A2311BC975CB423544D2924 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = E3835D8C97A2063A6B3D2814E4496D09 /* WebViewJavascriptBridge.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A29F8A557A671902120C5D7085BC0EBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 605A54AF00011802AEC283DBEE747448 /* UIKit.framework */; };
+		B55889FCDE24C763089C895964981C0B /* BidaliPaymentRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 274A0BD0E359FFF81D65A3FB36A26DF9 /* BidaliPaymentRequest.m */; };
+		CD28881E5D5C3AE592C11C77FB5FE64C /* BidaliConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 86420B7F26BFD80877AB03B4B725421A /* BidaliConfig.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CDDC4BCC3B78C071418500E3241494D0 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 478584E4CF317EA7029F3D1ED4F9E2D5 /* WebViewJavascriptBridge_JS.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CE65E9E8CF5A788C065ACA428C723D0D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F7B5FF333708EC794092BD95D6D97A /* WebKit.framework */; };
+		D9D686DFDD42A1F1632BEEEBB7D457AC /* BidaliPaymentRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 02E072491286328529375255AEEC20AE /* BidaliPaymentRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DEEFB927F041EA8D5E36FB5E263F3862 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B6AB78A6C1D4739F0460934CC9CD47 /* WebViewJavascriptBridgeBase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DF48CF8B504F0AFA59314B10347E6B73 /* WebViewJavascriptBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = DB7CFE935B805145870C523ABC0E8FC8 /* WebViewJavascriptBridge.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		260F59ED7AE7660989FFEDA949794BBD /* PBXContainerItemProxy */ = {
+		0A4EA15127057E74682EF7618B4135B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 19584DC4A2B1396CE947DA6E31BCBB91;
+			remoteGlobalIDString = FAF50F8381D7D4E60546581BB9A271D6;
 			remoteInfo = WebViewJavascriptBridge;
 		};
-		523A5E2F78A3072B4CBF4170984D6C06 /* PBXContainerItemProxy */ = {
+		2A55B12E9DF14953504515339C9182F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 19584DC4A2B1396CE947DA6E31BCBB91;
+			remoteGlobalIDString = FAF50F8381D7D4E60546581BB9A271D6;
 			remoteInfo = WebViewJavascriptBridge;
 		};
-		F3D26C4EDCA28BFC672E0A4E0BE5351E /* PBXContainerItemProxy */ = {
+		B503A29C89958B7E649540FF83DB69F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BD3D41C860712B907C86F024015CC1D2;
+			remoteGlobalIDString = 5D269DA559F61DFD39974A489BA0989C;
 			remoteInfo = "Bidali-iOS-SDK";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02E072491286328529375255AEEC20AE /* BidaliPaymentRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BidaliPaymentRequest.h; path = BidaliSDK/BidaliPaymentRequest.h; sourceTree = "<group>"; };
 		0AA4CC1D789DA2783447C62D0F699C77 /* Pods-Demo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Demo-acknowledgements.plist"; sourceTree = "<group>"; };
 		10AB3FAE64A344123550B6A31A53B751 /* WebViewJavascriptBridge-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WebViewJavascriptBridge-prefix.pch"; sourceTree = "<group>"; };
-		164F907FF00F20C02AA972E62B12638E /* Bidali-iOS-SDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bidali-iOS-SDK-prefix.pch"; sourceTree = "<group>"; };
-		2336359E77990523B97E3B12612A0DFB /* Bidali-iOS-SDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = "Bidali-iOS-SDK.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		2E5D65D68DAE907EB9AAEE015A84EE70 /* BidaliWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BidaliWebViewController.m; path = BidaliSDK/BidaliWebViewController.m; sourceTree = "<group>"; };
-		3916DDCEF4AC9D6573CB0EBF801E9342 /* BidaliWebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BidaliWebViewController.h; path = BidaliSDK/BidaliWebViewController.h; sourceTree = "<group>"; };
+		134D0E7A378AF2D0AA12809FD53FCA55 /* Bidali-iOS-SDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = "Bidali-iOS-SDK.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		274A0BD0E359FFF81D65A3FB36A26DF9 /* BidaliPaymentRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BidaliPaymentRequest.m; path = BidaliSDK/BidaliPaymentRequest.m; sourceTree = "<group>"; };
+		28EC44E5125FA0553838C0DDE4608D03 /* BidaliWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BidaliWebViewController.m; path = BidaliSDK/BidaliWebViewController.m; sourceTree = "<group>"; };
+		42F7B5FF333708EC794092BD95D6D97A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 		478584E4CF317EA7029F3D1ED4F9E2D5 /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WebViewJavascriptBridge_JS.m; path = WebViewJavascriptBridge/WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		4A8609FA4D066B50C6A4F8ACD1B1D0FC /* BidaliWebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BidaliWebViewController.h; path = BidaliSDK/BidaliWebViewController.h; sourceTree = "<group>"; };
 		572B3F96AE74A1DF9BE4ECB776DF02E8 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WebViewJavascriptBridgeBase.h; path = WebViewJavascriptBridge/WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		605A54AF00011802AEC283DBEE747448 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		6B296FDC327B021934216676F7740511 /* BidaliConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BidaliConfig.m; path = BidaliSDK/BidaliConfig.m; sourceTree = "<group>"; };
 		6F5DD532ECDA969984034D51B0F56454 /* Pods-Demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Demo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7A9BB9046ADA4DD01D262CD427DBFE89 /* Bidali-iOS-SDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Bidali-iOS-SDK-dummy.m"; sourceTree = "<group>"; };
 		7E61E2F2E514A86FEC211F0AD10D8AC1 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9B77A2945E85AFD828DA3402960CE6B2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
-		9C95EC06D01FAF35C40A6FDCC6003CB0 /* Bidali-iOS-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Bidali-iOS-SDK.xcconfig"; sourceTree = "<group>"; };
+		86420B7F26BFD80877AB03B4B725421A /* BidaliConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BidaliConfig.h; path = BidaliSDK/BidaliConfig.h; sourceTree = "<group>"; };
+		89E8D7970EAF31DC0F6673C353BEA6AD /* BidaliSDK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BidaliSDK.m; path = BidaliSDK/BidaliSDK.m; sourceTree = "<group>"; };
+		936E7E7A1F1A61EA58142A71C5B20F6B /* BidaliSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BidaliSDK.h; path = BidaliSDK/BidaliSDK.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EFC37F30C7587EE7B4781E2A7DDB581 /* WebViewJavascriptBridge.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WebViewJavascriptBridge.xcconfig; sourceTree = "<group>"; };
 		AF56544C3D7858204788853D31E7A1E7 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WebViewJavascriptBridge_JS.h; path = WebViewJavascriptBridge/WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
-		B1F10480955EA41CE990370E1E30820C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		B7D1FD3BD93FCB6CFEA1C6B75F6A354B /* BidaliSDK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BidaliSDK.m; path = BidaliSDK/BidaliSDK.m; sourceTree = "<group>"; };
 		BA0AEF1765FC735720FC747576ECC500 /* WebViewJavascriptBridge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WebViewJavascriptBridge-dummy.m"; sourceTree = "<group>"; };
 		BA98EAACDAFB971DF9EDCF9DEA28BE22 /* Pods-Demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Demo-frameworks.sh"; sourceTree = "<group>"; };
 		BC6F318B8C726435B2FF8566E7AC50B9 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
-		C5D151F9BDE8D4E17BB98F63C84AC041 /* libBidali-iOS-SDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libBidali-iOS-SDK.a"; path = "libBidali-iOS-SDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5D151F9BDE8D4E17BB98F63C84AC041 /* libBidali-iOS-SDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libBidali-iOS-SDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C74914E31C9C408845FEB70441B98117 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WKWebViewJavascriptBridge.h; path = WebViewJavascriptBridge/WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		C9B6AB78A6C1D4739F0460934CC9CD47 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WebViewJavascriptBridgeBase.m; path = WebViewJavascriptBridge/WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		D034F14E7EB7D7B19E4F397161308E1C /* Bidali-iOS-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Bidali-iOS-SDK.xcconfig"; sourceTree = "<group>"; };
 		D25544B348B28F2BBA3D9053B844D7D4 /* Pods-Demo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Demo-resources.sh"; sourceTree = "<group>"; };
-		D472500E00E444197AB85FB6AB72C6CE /* BidaliConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BidaliConfig.m; path = BidaliSDK/BidaliConfig.m; sourceTree = "<group>"; };
-		D92B9160F21D401B82A1FD32AF3F5D2B /* libWebViewJavascriptBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libWebViewJavascriptBridge.a; path = libWebViewJavascriptBridge.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA060215A2142A6E23AB2744B6DF51FE /* Bidali-iOS-SDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Bidali-iOS-SDK-dummy.m"; sourceTree = "<group>"; };
+		D92B9160F21D401B82A1FD32AF3F5D2B /* libWebViewJavascriptBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWebViewJavascriptBridge.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB7CFE935B805145870C523ABC0E8FC8 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WebViewJavascriptBridge.h; path = WebViewJavascriptBridge/WebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		DC1140660279E7F050BB287D0BA921FA /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Demo.a"; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC1140660279E7F050BB287D0BA921FA /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA944E1D5D966DBCA7EB7C661855A95 /* Pods-Demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Demo-dummy.m"; sourceTree = "<group>"; };
-		DDFF5A3295E3FC7208125F92CA26F740 /* BidaliSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BidaliSDK.h; path = BidaliSDK/BidaliSDK.h; sourceTree = "<group>"; };
 		E3835D8C97A2063A6B3D2814E4496D09 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WebViewJavascriptBridge.m; path = WebViewJavascriptBridge/WebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		E42D45DB0D3C032FE6FA23D1DBDAA6A4 /* BidaliConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BidaliConfig.h; path = BidaliSDK/BidaliConfig.h; sourceTree = "<group>"; };
+		EBC25C797F1863EC749A46A11ECAF8FA /* Bidali-iOS-SDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bidali-iOS-SDK-prefix.pch"; sourceTree = "<group>"; };
 		FE3CBE405066B1C4C76231F81EF4332B /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WKWebViewJavascriptBridge.m; path = WebViewJavascriptBridge/WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		43EE239C446E982933810B6CCA438B80 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4FB8CF17DD134B80EEB432D4C241B11B /* UIKit.framework in Frameworks */,
-				2D55B767EC5B88097810005A54110ED2 /* WebKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4915402E2908ED2589B96364C5469184 /* Frameworks */ = {
+		09A6CFE05A1AE9CDDD2E86E3A1CA90B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7DC2C2C2A16CF60954618A1E89F2F1CA /* Frameworks */ = {
+		19619EF4FB3504809EB212AF5E665091 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA68B44EF0190542FDE0DCE18C8DFFD7 /* UIKit.framework in Frameworks */,
-				6629F7FCA1A646F4ED5274638A133241 /* WebKit.framework in Frameworks */,
+				93BC764C63B103B131DBD320B0857176 /* UIKit.framework in Frameworks */,
+				CE65E9E8CF5A788C065ACA428C723D0D /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE408E72A16ACD7B3BE9732AC9118B04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A29F8A557A671902120C5D7085BC0EBC /* UIKit.framework in Frameworks */,
+				3343929810E144097EAE0C09107E888D /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,14 +152,48 @@
 				FE3CBE405066B1C4C76231F81EF4332B /* WKWebViewJavascriptBridge.m */,
 				484D998465B7B8DD9F86A088DA6B0E91 /* Support Files */,
 			);
-			name = WebViewJavascriptBridge;
 			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
+		25ADFDFB4CBE313BE4FAF3174B5F7779 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				134D0E7A378AF2D0AA12809FD53FCA55 /* Bidali-iOS-SDK.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		349B556C0C1E64CC1039A4E4CFDC4011 /* Bidali-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				86420B7F26BFD80877AB03B4B725421A /* BidaliConfig.h */,
+				6B296FDC327B021934216676F7740511 /* BidaliConfig.m */,
+				02E072491286328529375255AEEC20AE /* BidaliPaymentRequest.h */,
+				274A0BD0E359FFF81D65A3FB36A26DF9 /* BidaliPaymentRequest.m */,
+				936E7E7A1F1A61EA58142A71C5B20F6B /* BidaliSDK.h */,
+				89E8D7970EAF31DC0F6673C353BEA6AD /* BidaliSDK.m */,
+				4A8609FA4D066B50C6A4F8ACD1B1D0FC /* BidaliWebViewController.h */,
+				28EC44E5125FA0553838C0DDE4608D03 /* BidaliWebViewController.m */,
+				25ADFDFB4CBE313BE4FAF3174B5F7779 /* Pod */,
+				F0B663FBC6398E8DCFB7091D5DB30C85 /* Support Files */,
+			);
+			name = "Bidali-iOS-SDK";
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		3CEBD9BED431AFD03AF51BECADEC738A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				605A54AF00011802AEC283DBEE747448 /* UIKit.framework */,
+				42F7B5FF333708EC794092BD95D6D97A /* WebKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				952CE75E2C61C9A46BEF234EAAFADEE4 /* iOS */,
+				3CEBD9BED431AFD03AF51BECADEC738A /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,22 +209,11 @@
 			path = "../Target Support Files/WebViewJavascriptBridge";
 			sourceTree = "<group>";
 		};
-		647C76421E6A67867CC14BDF0CFF82CC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9C95EC06D01FAF35C40A6FDCC6003CB0 /* Bidali-iOS-SDK.xcconfig */,
-				DA060215A2142A6E23AB2744B6DF51FE /* Bidali-iOS-SDK-dummy.m */,
-				164F907FF00F20C02AA972E62B12638E /* Bidali-iOS-SDK-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "Demo/Pods/Target Support Files/Bidali-iOS-SDK";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				EC1A8B7709A99638A4A32F46B388E2E3 /* Development Pods */,
+				E6E72A0CBE6917D88D68B1CA37088A5A /* Development Pods */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
 				C1E81C415E68AF704EDFA5CB7FF5AFD8 /* Pods */,
 				8221194D1BF40C014D463596508C559B /* Products */,
@@ -204,23 +231,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		952CE75E2C61C9A46BEF234EAAFADEE4 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				B1F10480955EA41CE990370E1E30820C /* UIKit.framework */,
-				9B77A2945E85AFD828DA3402960CE6B2 /* WebKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		B98F5D7DAA5C6B23EB5FFA19709BD2FC /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				2336359E77990523B97E3B12612A0DFB /* Bidali-iOS-SDK.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		C1E81C415E68AF704EDFA5CB7FF5AFD8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,28 +239,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CF5E2FC164D5CFE73D77A313E35AAB76 /* Bidali-iOS-SDK */ = {
+		E6E72A0CBE6917D88D68B1CA37088A5A /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E42D45DB0D3C032FE6FA23D1DBDAA6A4 /* BidaliConfig.h */,
-				D472500E00E444197AB85FB6AB72C6CE /* BidaliConfig.m */,
-				DDFF5A3295E3FC7208125F92CA26F740 /* BidaliSDK.h */,
-				B7D1FD3BD93FCB6CFEA1C6B75F6A354B /* BidaliSDK.m */,
-				3916DDCEF4AC9D6573CB0EBF801E9342 /* BidaliWebViewController.h */,
-				2E5D65D68DAE907EB9AAEE015A84EE70 /* BidaliWebViewController.m */,
-				B98F5D7DAA5C6B23EB5FFA19709BD2FC /* Pod */,
-				647C76421E6A67867CC14BDF0CFF82CC /* Support Files */,
-			);
-			name = "Bidali-iOS-SDK";
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		EC1A8B7709A99638A4A32F46B388E2E3 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CF5E2FC164D5CFE73D77A313E35AAB76 /* Bidali-iOS-SDK */,
+				349B556C0C1E64CC1039A4E4CFDC4011 /* Bidali-iOS-SDK */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F0B663FBC6398E8DCFB7091D5DB30C85 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D034F14E7EB7D7B19E4F397161308E1C /* Bidali-iOS-SDK.xcconfig */,
+				7A9BB9046ADA4DD01D262CD427DBFE89 /* Bidali-iOS-SDK-dummy.m */,
+				EBC25C797F1863EC749A46A11ECAF8FA /* Bidali-iOS-SDK-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Demo/Pods/Target Support Files/Bidali-iOS-SDK";
 			sourceTree = "<group>";
 		};
 		F64792801741A31D953EA71E1A34CBCA /* Targets Support Files */ = {
@@ -264,37 +269,82 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		21D57B03150CFC4E2F46E137C479B4F2 /* Headers */ = {
+		B6B71BCBF78B800C9E43ADAD784CC15C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A83B1BC1C5661FB7E46A185326E24460 /* WebViewJavascriptBridge.h in Headers */,
-				31EE50C8E4CF9E8796F93B292CF0B803 /* WebViewJavascriptBridge_JS.h in Headers */,
-				20F7225695D4B6FF96484E9708C8FE35 /* WebViewJavascriptBridgeBase.h in Headers */,
-				D1558C378240A9D16D7EB6966EF7C787 /* WKWebViewJavascriptBridge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		639A818CD2206BE9F397129C8FE3F452 /* Headers */ = {
+		E22CABB68CA6E54ABB5E68B6FE9691C9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2030B685149FF1D2006F4507F16CACC0 /* BidaliConfig.h in Headers */,
-				62BFFAC34E0AC57BB0C289342912A325 /* BidaliSDK.h in Headers */,
-				B8AA693C1700D7942DB51399C1ADFF3E /* BidaliWebViewController.h in Headers */,
+				CD28881E5D5C3AE592C11C77FB5FE64C /* BidaliConfig.h in Headers */,
+				D9D686DFDD42A1F1632BEEEBB7D457AC /* BidaliPaymentRequest.h in Headers */,
+				313946E6D1A2A952C956DAE61DACD766 /* BidaliSDK.h in Headers */,
+				3C4D5216BC70F7108A8F0CA2E03A9B46 /* BidaliWebViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC6F23000B0D50C5174D32D7996ED39D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF48CF8B504F0AFA59314B10347E6B73 /* WebViewJavascriptBridge.h in Headers */,
+				07012EA7A0829D45F61641F626EBD34A /* WebViewJavascriptBridge_JS.h in Headers */,
+				24961D4E43821134FCA76328F75912C4 /* WebViewJavascriptBridgeBase.h in Headers */,
+				88B455ABC6BD54EB85EE1FDCE886CBA4 /* WKWebViewJavascriptBridge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		19584DC4A2B1396CE947DA6E31BCBB91 /* WebViewJavascriptBridge */ = {
+		5D269DA559F61DFD39974A489BA0989C /* Bidali-iOS-SDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1FB44F22A2298AB23192DB2B27108373 /* Build configuration list for PBXNativeTarget "WebViewJavascriptBridge" */;
+			buildConfigurationList = 07256DFF1F9569714FE7070811181D0E /* Build configuration list for PBXNativeTarget "Bidali-iOS-SDK" */;
 			buildPhases = (
-				7A83BF1D5183C9AE6A411AC87912D037 /* Sources */,
-				43EE239C446E982933810B6CCA438B80 /* Frameworks */,
-				21D57B03150CFC4E2F46E137C479B4F2 /* Headers */,
+				E22CABB68CA6E54ABB5E68B6FE9691C9 /* Headers */,
+				105AACD8EBADCB38234FA48A40761905 /* Sources */,
+				AE408E72A16ACD7B3BE9732AC9118B04 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6DAC545CAD93348AA871F6768D3AF4A9 /* PBXTargetDependency */,
+			);
+			name = "Bidali-iOS-SDK";
+			productName = "Bidali-iOS-SDK";
+			productReference = C5D151F9BDE8D4E17BB98F63C84AC041 /* libBidali-iOS-SDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B1AC49EE90BD99886FB554DC6FB516C9 /* Pods-Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A07F0C7810C819EF94B3EC7DF7F9339 /* Build configuration list for PBXNativeTarget "Pods-Demo" */;
+			buildPhases = (
+				B6B71BCBF78B800C9E43ADAD784CC15C /* Headers */,
+				D67F739264B34C8FC37492DFEFA7340C /* Sources */,
+				09A6CFE05A1AE9CDDD2E86E3A1CA90B9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6B19A8597620A0896B1E152D3C38BF5 /* PBXTargetDependency */,
+				65F5560D3997662CDECF9BD08BF8C010 /* PBXTargetDependency */,
+			);
+			name = "Pods-Demo";
+			productName = "Pods-Demo";
+			productReference = DC1140660279E7F050BB287D0BA921FA /* libPods-Demo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FAF50F8381D7D4E60546581BB9A271D6 /* WebViewJavascriptBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7226BF5EC2DF3081908205C743AA461B /* Build configuration list for PBXNativeTarget "WebViewJavascriptBridge" */;
+			buildPhases = (
+				FC6F23000B0D50C5174D32D7996ED39D /* Headers */,
+				22DABF522E5A1567895ED8A5174968F0 /* Sources */,
+				19619EF4FB3504809EB212AF5E665091 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -303,42 +353,6 @@
 			name = WebViewJavascriptBridge;
 			productName = WebViewJavascriptBridge;
 			productReference = D92B9160F21D401B82A1FD32AF3F5D2B /* libWebViewJavascriptBridge.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		BD3D41C860712B907C86F024015CC1D2 /* Bidali-iOS-SDK */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C7C6AC06EB1979D90534158A657FC0F3 /* Build configuration list for PBXNativeTarget "Bidali-iOS-SDK" */;
-			buildPhases = (
-				C512116BF908AE9103C376A79D8F6DC3 /* Sources */,
-				7DC2C2C2A16CF60954618A1E89F2F1CA /* Frameworks */,
-				639A818CD2206BE9F397129C8FE3F452 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				121CE434CB2BF0F47945F10550A02DFF /* PBXTargetDependency */,
-			);
-			name = "Bidali-iOS-SDK";
-			productName = "Bidali-iOS-SDK";
-			productReference = C5D151F9BDE8D4E17BB98F63C84AC041 /* libBidali-iOS-SDK.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		FE7CABCCC2D615BD002B275662967E0F /* Pods-Demo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D1FE79EF1C961F544361E588562CC9A3 /* Build configuration list for PBXNativeTarget "Pods-Demo" */;
-			buildPhases = (
-				505C737F3389E1155B681726F22F8566 /* Sources */,
-				4915402E2908ED2589B96364C5469184 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				090C7973DFC9AA664FBFDA241DA6CA01 /* PBXTargetDependency */,
-				3B9CAD76174CF0B72CA723FBDAC045CB /* PBXTargetDependency */,
-			);
-			name = "Pods-Demo";
-			productName = "Pods-Demo";
-			productReference = DC1140660279E7F050BB287D0BA921FA /* libPods-Demo.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -362,197 +376,71 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BD3D41C860712B907C86F024015CC1D2 /* Bidali-iOS-SDK */,
-				FE7CABCCC2D615BD002B275662967E0F /* Pods-Demo */,
-				19584DC4A2B1396CE947DA6E31BCBB91 /* WebViewJavascriptBridge */,
+				5D269DA559F61DFD39974A489BA0989C /* Bidali-iOS-SDK */,
+				B1AC49EE90BD99886FB554DC6FB516C9 /* Pods-Demo */,
+				FAF50F8381D7D4E60546581BB9A271D6 /* WebViewJavascriptBridge */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		505C737F3389E1155B681726F22F8566 /* Sources */ = {
+		105AACD8EBADCB38234FA48A40761905 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D067558530D8F7ADA77205A4065E842 /* Pods-Demo-dummy.m in Sources */,
+				506BDD30F234B4BFE935CDC933C714B8 /* Bidali-iOS-SDK-dummy.m in Sources */,
+				494B9D3350D376DCEE7E767F3A95FB1B /* BidaliConfig.m in Sources */,
+				B55889FCDE24C763089C895964981C0B /* BidaliPaymentRequest.m in Sources */,
+				3B746EB0BD87AF5B6DCB01A9CF530F1E /* BidaliSDK.m in Sources */,
+				11203E06A7DC737493BD63C453DF4C3B /* BidaliWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A83BF1D5183C9AE6A411AC87912D037 /* Sources */ = {
+		22DABF522E5A1567895ED8A5174968F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1594DBE28BB0992DB78A99A709720B9A /* WebViewJavascriptBridge-dummy.m in Sources */,
-				4DCBABE2635548AD3EC4EA33F5A4CC19 /* WebViewJavascriptBridge.m in Sources */,
-				093282AF846B10CBFBBF444019EC35F6 /* WebViewJavascriptBridge_JS.m in Sources */,
-				F9CC7C10D64B3B93BC766BCE89A8B298 /* WebViewJavascriptBridgeBase.m in Sources */,
-				53CB62C3ABD4972E26C1971D5D192D2A /* WKWebViewJavascriptBridge.m in Sources */,
+				2C9093AFB329F9B57BD808FC8A311930 /* WebViewJavascriptBridge-dummy.m in Sources */,
+				9621472D0A2311BC975CB423544D2924 /* WebViewJavascriptBridge.m in Sources */,
+				CDDC4BCC3B78C071418500E3241494D0 /* WebViewJavascriptBridge_JS.m in Sources */,
+				DEEFB927F041EA8D5E36FB5E263F3862 /* WebViewJavascriptBridgeBase.m in Sources */,
+				5AAF1D467E19E1D5A63214BA360AA33F /* WKWebViewJavascriptBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C512116BF908AE9103C376A79D8F6DC3 /* Sources */ = {
+		D67F739264B34C8FC37492DFEFA7340C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2144B4DEBFCC58CC374070F3F85DC2D2 /* Bidali-iOS-SDK-dummy.m in Sources */,
-				3498CB8155015987F1AF4F679E718819 /* BidaliConfig.m in Sources */,
-				73040938B624975F8835E617532AD187 /* BidaliSDK.m in Sources */,
-				E59D244C0B40FBBFF09F2EEC714786F6 /* BidaliWebViewController.m in Sources */,
+				8CF6F27480FCFD0ECD2E7355693C426F /* Pods-Demo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		090C7973DFC9AA664FBFDA241DA6CA01 /* PBXTargetDependency */ = {
+		65F5560D3997662CDECF9BD08BF8C010 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WebViewJavascriptBridge;
+			target = FAF50F8381D7D4E60546581BB9A271D6 /* WebViewJavascriptBridge */;
+			targetProxy = 0A4EA15127057E74682EF7618B4135B7 /* PBXContainerItemProxy */;
+		};
+		6DAC545CAD93348AA871F6768D3AF4A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WebViewJavascriptBridge;
+			target = FAF50F8381D7D4E60546581BB9A271D6 /* WebViewJavascriptBridge */;
+			targetProxy = 2A55B12E9DF14953504515339C9182F1 /* PBXContainerItemProxy */;
+		};
+		F6B19A8597620A0896B1E152D3C38BF5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Bidali-iOS-SDK";
-			target = BD3D41C860712B907C86F024015CC1D2 /* Bidali-iOS-SDK */;
-			targetProxy = F3D26C4EDCA28BFC672E0A4E0BE5351E /* PBXContainerItemProxy */;
-		};
-		121CE434CB2BF0F47945F10550A02DFF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = WebViewJavascriptBridge;
-			target = 19584DC4A2B1396CE947DA6E31BCBB91 /* WebViewJavascriptBridge */;
-			targetProxy = 260F59ED7AE7660989FFEDA949794BBD /* PBXContainerItemProxy */;
-		};
-		3B9CAD76174CF0B72CA723FBDAC045CB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = WebViewJavascriptBridge;
-			target = 19584DC4A2B1396CE947DA6E31BCBB91 /* WebViewJavascriptBridge */;
-			targetProxy = 523A5E2F78A3072B4CBF4170984D6C06 /* PBXContainerItemProxy */;
+			target = 5D269DA559F61DFD39974A489BA0989C /* Bidali-iOS-SDK */;
+			targetProxy = B503A29C89958B7E649540FF83DB69F6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		063198AB09B9CDB3A695432FC17AD8CA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		100A34ACC9C3121032BEAB7515C43489 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EFC37F30C7587EE7B4781E2A7DDB581 /* WebViewJavascriptBridge.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/WebViewJavascriptBridge/WebViewJavascriptBridge-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = WebViewJavascriptBridge;
-				PRODUCT_NAME = WebViewJavascriptBridge;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		13DF78D96F8B9C57359C6C1C1E826F41 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E61E2F2E514A86FEC211F0AD10D8AC1 /* Pods-Demo.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		41B5A6199E2E4B7EBA402788BA98C944 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EFC37F30C7587EE7B4781E2A7DDB581 /* WebViewJavascriptBridge.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/WebViewJavascriptBridge/WebViewJavascriptBridge-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = WebViewJavascriptBridge;
-				PRODUCT_NAME = WebViewJavascriptBridge;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		87EAC867385563488A6D8F1E74AC46B4 /* Debug */ = {
+		0AA3B91655AF95B1F49159CD8085CD89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -606,16 +494,41 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		AD8521337EAA98FFB42EF33196E8A99E /* Release */ = {
+		1648F82139B5AC3B859E10A50E2F8A40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E61E2F2E514A86FEC211F0AD10D8AC1 /* Pods-Demo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		33A32BF218E1AD4071459D4052BE5AE9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BC6F318B8C726435B2FF8566E7AC50B9 /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
@@ -638,9 +551,140 @@
 			};
 			name = Release;
 		};
-		D16D26FA932929D32D4F4A0634FB4FB3 /* Release */ = {
+		5DDE49475AC2B07749580BC8645FF3CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C95EC06D01FAF35C40A6FDCC6003CB0 /* Bidali-iOS-SDK.xcconfig */;
+			baseConfigurationReference = 9EFC37F30C7587EE7B4781E2A7DDB581 /* WebViewJavascriptBridge.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/WebViewJavascriptBridge/WebViewJavascriptBridge-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = WebViewJavascriptBridge;
+				PRODUCT_NAME = WebViewJavascriptBridge;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8000995DA02063BF3777393CD52061DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		946486AC5E8BF9C01059C0B6DDCACB8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D034F14E7EB7D7B19E4F397161308E1C /* Bidali-iOS-SDK.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Bidali-iOS-SDK/Bidali-iOS-SDK-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Bidali_iOS_SDK;
+				PRODUCT_NAME = "Bidali-iOS-SDK";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C5E4161C745D2D29EEAE7E51D9559A75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EFC37F30C7587EE7B4781E2A7DDB581 /* WebViewJavascriptBridge.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/WebViewJavascriptBridge/WebViewJavascriptBridge-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = WebViewJavascriptBridge;
+				PRODUCT_NAME = WebViewJavascriptBridge;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C700AA069E66A057541594216F790163 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D034F14E7EB7D7B19E4F397161308E1C /* Bidali-iOS-SDK.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -662,37 +706,23 @@
 			};
 			name = Release;
 		};
-		D9E08869FB0668D997258D8D3D9C6478 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C95EC06D01FAF35C40A6FDCC6003CB0 /* Bidali-iOS-SDK.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Bidali-iOS-SDK/Bidali-iOS-SDK-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Bidali_iOS_SDK;
-				PRODUCT_NAME = "Bidali-iOS-SDK";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1FB44F22A2298AB23192DB2B27108373 /* Build configuration list for PBXNativeTarget "WebViewJavascriptBridge" */ = {
+		07256DFF1F9569714FE7070811181D0E /* Build configuration list for PBXNativeTarget "Bidali-iOS-SDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				100A34ACC9C3121032BEAB7515C43489 /* Debug */,
-				41B5A6199E2E4B7EBA402788BA98C944 /* Release */,
+				946486AC5E8BF9C01059C0B6DDCACB8C /* Debug */,
+				C700AA069E66A057541594216F790163 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A07F0C7810C819EF94B3EC7DF7F9339 /* Build configuration list for PBXNativeTarget "Pods-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1648F82139B5AC3B859E10A50E2F8A40 /* Debug */,
+				33A32BF218E1AD4071459D4052BE5AE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -700,26 +730,17 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87EAC867385563488A6D8F1E74AC46B4 /* Debug */,
-				063198AB09B9CDB3A695432FC17AD8CA /* Release */,
+				0AA3B91655AF95B1F49159CD8085CD89 /* Debug */,
+				8000995DA02063BF3777393CD52061DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C7C6AC06EB1979D90534158A657FC0F3 /* Build configuration list for PBXNativeTarget "Bidali-iOS-SDK" */ = {
+		7226BF5EC2DF3081908205C743AA461B /* Build configuration list for PBXNativeTarget "WebViewJavascriptBridge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D9E08869FB0668D997258D8D3D9C6478 /* Debug */,
-				D16D26FA932929D32D4F4A0634FB4FB3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D1FE79EF1C961F544361E588562CC9A3 /* Build configuration list for PBXNativeTarget "Pods-Demo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				13DF78D96F8B9C57359C6C1C1E826F41 /* Debug */,
-				AD8521337EAA98FFB42EF33196E8A99E /* Release */,
+				5DDE49475AC2B07749580BC8645FF3CE /* Debug */,
+				C5E4161C745D2D29EEAE7E51D9559A75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

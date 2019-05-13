@@ -59,10 +59,10 @@
                               @"apiKey": @"1234"
                               };
     
-    BidaliOnPaymentRequestCallback onPaymentRequest = ^(NSDictionary *paymentRequest){
+    BidaliOnPaymentRequestCallback onPaymentRequest = ^(BidaliPaymentRequest *paymentRequest){
         NSLog(@"onPaymentRequest! in clients code! %@", paymentRequest);
         //TODO: Also show chargeId / orderId and description
-        NSString* title = [NSString stringWithFormat:@"%@ - %@ %@?\n\nchargeId: %@", paymentRequest[@"description"], paymentRequest[@"amount"], paymentRequest[@"currency"], paymentRequest[@"chargeId"]];
+        NSString* title = [NSString stringWithFormat:@"%@ - %@ %@?\n\nchargeId: %@", paymentRequest.description, paymentRequest.amount, paymentRequest.currency, paymentRequest.chargeId];
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
                                                                        message:@""
                                                                 preferredStyle:UIAlertControllerStyleActionSheet];
@@ -82,13 +82,14 @@
                               @"env": @"local",
                               @"apiKey": @"1234",
                               @"paymentCurrencies": @[@"BTC"],
+                              @"paymentType": @(BidaliPaymentTypeManual),
                               @"onOrderCreated": ^{
                                   NSLog(@"orderCreated! in clients code!");
                               }};
     
-    BidaliOnPaymentRequestCallback onPaymentRequest = ^(NSDictionary *paymentRequest){
+    BidaliOnPaymentRequestCallback onPaymentRequest = ^(BidaliPaymentRequest *paymentRequest){
         NSLog(@"onPaymentRequest! in clients code! %@", paymentRequest);
-        NSString* title = [NSString stringWithFormat:@"%@ - %@ %@?\n\nchargeId: %@", paymentRequest[@"description"], paymentRequest[@"amount"], paymentRequest[@"currency"], paymentRequest[@"chargeId"]];
+        NSString* title = [NSString stringWithFormat:@"%@ - %@ %@?\n\nchargeId: %@", paymentRequest.description, paymentRequest.amount, paymentRequest.currency, paymentRequest.chargeId];
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
                                                                        message:@""
                                                                 preferredStyle:UIAlertControllerStyleActionSheet];

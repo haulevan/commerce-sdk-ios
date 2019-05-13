@@ -1,5 +1,6 @@
 #import "BidaliWebViewController.h"
 #import "WebViewJavascriptBridge.h"
+#import "BidaliPaymentRequest.h"
 
 @interface BidaliWebViewController ()
 @property WebViewJavascriptBridge* bridge;
@@ -60,7 +61,8 @@
     
     if(self.onPaymentRequest) {
         [_bridge registerHandler:@"onPaymentRequest" handler:^(id data, WVJBResponseCallback responseCallback) {
-            self.onPaymentRequest(data);
+            BidaliPaymentRequest *paymentRequest = [BidaliPaymentRequest requestWithDictionary:(NSDictionary*)data];
+            self.onPaymentRequest(paymentRequest);
             responseCallback(data);
         }];
     }
@@ -77,10 +79,14 @@
         UIApplication *application = [UIApplication sharedApplication];
         NSURL *url = [NSURL URLWithString:urlString];
         if ([application respondsToSelector:@selector(openURL:options:completionHandler:)]) {
-            [application openURL:url options:@{}
-               completionHandler:^(BOOL success) {
-                   
-               }];
+            if (@available(iOS 10.0, *)) {
+                [application openURL:url options:@{}
+                   completionHandler:^(BOOL success) {
+                       
+                   }];
+            } else {
+                // Fallback on earlier versions
+            }
         } else {
             [application openURL:url];
         }

@@ -1,9 +1,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <Bidali-iOS-SDK/BidaliPaymentRequest.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^BidaliOnPaymentRequestCallback)(id responseData);
+typedef enum { BidaliPaymentTypeApi, BidaliPaymentTypeManual, BidaliPaymentTypePrefill  } BidaliPaymentType;
+typedef void (^BidaliOnPaymentRequestCallback)(BidaliPaymentRequest *paymentRequest);
 
 @interface BidaliSDK : NSObject
 + (BidaliSDK *)getInstance;

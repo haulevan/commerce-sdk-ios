@@ -13,6 +13,11 @@
 }
 
 - (void)show:(UIViewController *)controller options:(NSDictionary *)options onPaymentRequest:(nonnull BidaliOnPaymentRequestCallback)onPaymentRequest {
+    NSDictionary *paymentTypeStrings = @{
+      @(BidaliPaymentTypeApi) : @"api",
+      @(BidaliPaymentTypeManual) : @"manual",
+      @(BidaliPaymentTypePrefill) : @"prefill",
+    };
     NSDictionary *urls = @{
                            @"local" : @"http://localhost:3009/embed",
                            @"staging" : @"https://commerce.staging.bidali.com/embed",
@@ -30,10 +35,6 @@
                                               @"required": @NO
                                               },
                                       @"email": @{
-                                              @"type": @"string",
-                                              @"required": @NO
-                                              },
-                                      @"paymentType": @{
                                               @"type": @"string",
                                               @"required": @NO
                                               },
@@ -64,6 +65,14 @@
         widgetUrl = options[@"url"];
     } else if(opts[@"env"] && urls[opts[@"env"]]) {
         widgetUrl = urls[opts[@"env"]];
+    }
+    
+    if(options[@"paymentType"]) {
+        NSString *paymentTypeAsString = [paymentTypeStrings objectForKey:options[@"paymentType"]];
+        opts[@"paymentType"] = paymentTypeAsString;
+        NSLog(@"%@", paymentTypeAsString);
+    } else {
+        opts[@"paymentType"] = [paymentTypeStrings objectForKey:@(BidaliPaymentTypePrefill)];
     }
 
     BidaliWebViewController *webViewController = [[BidaliWebViewController alloc] initWithOptions:opts url:widgetUrl onPaymentRequest:onPaymentRequest];
