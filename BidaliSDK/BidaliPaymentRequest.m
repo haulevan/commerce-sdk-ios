@@ -17,6 +17,10 @@
     return self;
 }
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"amount: %@\ncurrency:%@\naddress:%@\nchargeId:%@\nchargeDescription:%@\nextraIdName:%@\nextraId:%@", self.amount, self.currency, self.address, self.chargeId, self.chargeDescription, self.extraIdName, self.extraId];
+}
+
 - (void)dealloc {
     self.amount = nil;
     self.currency = nil;

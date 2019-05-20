@@ -15,23 +15,6 @@
 
 @implementation ViewController
 
-
-- (UIButton *)buttonWithTitle:(NSString *)title selector:(SEL)selector {
-    UIColor *bgColor = [UIColor whiteColor];
-    UIColor *textColor = [UIColor colorWithRed:0.404 green:0.475 blue:0.859 alpha:1];
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    
-    button.layer.cornerRadius = 30;
-//    button.layer.borderColor = bgColor.CGColor;
-//    button.layer.borderWidth = 1;
-    [button setBackgroundColor:textColor];
-    [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
-    [button setTitleColor:bgColor forState:UIControlStateNormal];
-    [button setTitle:title forState:UIControlStateNormal];
-    return button;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -54,58 +37,68 @@
 }
 
 - (void)defaultOptions {
-    NSDictionary *options = @{
-                              @"env": @"local",
-                              @"apiKey": @"1234"
-                              };
-    
-    BidaliOnPaymentRequestCallback onPaymentRequest = ^(BidaliPaymentRequest *paymentRequest){
-        NSLog(@"onPaymentRequest! in clients code! %@", paymentRequest);
-        //TODO: Also show chargeId / orderId and description
-        NSString* title = [NSString stringWithFormat:@"%@ - %@ %@?\n\nchargeId: %@", paymentRequest.description, paymentRequest.amount, paymentRequest.currency, paymentRequest.chargeId];
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
-                                                                       message:@""
-                                                                preferredStyle:UIAlertControllerStyleActionSheet];
-        
-        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                              handler:^(UIAlertAction * action) {}];
-        
-        [alert addAction:defaultAction];
-        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+    BidaliSDKOptions *options = [BidaliSDKOptions optionsWithApiKey:@"12345"];
+    options.env = @"staging";
+    options.onPaymentRequest = ^(BidaliPaymentRequest *paymentRequest){
+        [self showAlertForPaymentRequest:paymentRequest];
     };
-    
-    [[BidaliSDK getInstance] show:self options:options onPaymentRequest:onPaymentRequest];
+    [[BidaliSDK getInstance] show:self options:options];
 }
 
 - (void)btcOnly {
-    NSDictionary *options = @{
-                              @"env": @"local",
-                              @"apiKey": @"1234",
-                              @"paymentCurrencies": @[@"BTC"],
-                              @"paymentType": @(BidaliPaymentTypeManual),
-                              @"onOrderCreated": ^{
-                                  NSLog(@"orderCreated! in clients code!");
-                              }};
-    
-    BidaliOnPaymentRequestCallback onPaymentRequest = ^(BidaliPaymentRequest *paymentRequest){
-        NSLog(@"onPaymentRequest! in clients code! %@", paymentRequest);
-        NSString* title = [NSString stringWithFormat:@"%@ - %@ %@?\n\nchargeId: %@", paymentRequest.description, paymentRequest.amount, paymentRequest.currency, paymentRequest.chargeId];
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
-                                                                       message:@""
-                                                                preferredStyle:UIAlertControllerStyleActionSheet];
-        
-        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                              handler:^(UIAlertAction * action) {}];
-        
-        [alert addAction:defaultAction];
-        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+    BidaliSDKOptions *options = [BidaliSDKOptions optionsWithApiKey:@"12345"];
+    options.env = @"staging";
+    options.paymentCurrencies = @[@"BTC"];
+    options.paymentType = BidaliPaymentTypeManual;
+    options.onPaymentRequest = ^(BidaliPaymentRequest *paymentRequest){
+        [self showAlertForPaymentRequest:paymentRequest];
     };
     
-    [[BidaliSDK getInstance] show:self options:options onPaymentRequest:onPaymentRequest];
+    [[BidaliSDK getInstance] show:self options:options];
+}
+
+- (UIButton *)buttonWithTitle:(NSString *)title selector:(SEL)selector {
+    UIColor *bgColor = [UIColor whiteColor];
+    UIColor *textColor = [UIColor colorWithRed:0.404 green:0.475 blue:0.859 alpha:1];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    button.layer.cornerRadius = 30;
+    [button setBackgroundColor:textColor];
+    [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+    [button setTitleColor:bgColor forState:UIControlStateNormal];
+    [button setTitle:title forState:UIControlStateNormal];
+    return button;
 }
 
 - (bool)shouldAutorotate {
     return false;
+}
+
+- (UIViewController*) topMostController {
+    UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    while (topController.presentedViewController) {
+        topController = topController.presentedViewController;
+    }
+    
+    return topController;
+}
+
+- (void)showAlertForPaymentRequest:(BidaliPaymentRequest *)paymentRequest {
+    NSLog(@"Received onPaymentRequest from BidaliSDK\n%@", paymentRequest);
+    NSString* message = [NSString stringWithFormat:@"Send %@ %@ to %@ for chargeId: %@", paymentRequest.amount, paymentRequest.currency, paymentRequest.address, paymentRequest.chargeId];
+    if(paymentRequest.extraId != nil) {
+        message = [NSString stringWithFormat:@"%@ with %@:%@", message, paymentRequest.extraIdName, paymentRequest.extraId];
+    }
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:paymentRequest.chargeDescription
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    [alert addAction:defaultAction];
+    [[self topMostController] presentViewController:alert animated:YES completion:nil];
 }
 
 @end

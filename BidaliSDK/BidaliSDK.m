@@ -12,7 +12,7 @@
     return bidali_sdk;
 }
 
-- (void)show:(UIViewController *)controller options:(NSDictionary *)options onPaymentRequest:(nonnull BidaliOnPaymentRequestCallback)onPaymentRequest {
+- (void)show:(UIViewController *)controller options:(BidaliSDKOptions *)options {
     NSDictionary *paymentTypeStrings = @{
       @(BidaliPaymentTypeApi) : @"api",
       @(BidaliPaymentTypeManual) : @"manual",
@@ -25,31 +25,23 @@
                            };
     NSMutableDictionary *opts = [NSMutableDictionary dictionary];
     NSString *defaultEnv = @"production";
-    NSDictionary *propDefinitions = @{
-                                      @"env": @{
-                                              @"type": @"string",
-                                              @"required": @NO
-                                              },
-                                      @"apiKey": @{
-                                              @"type": @"string",
-                                              @"required": @NO
-                                              },
-                                      @"email": @{
-                                              @"type": @"string",
-                                              @"required": @NO
-                                              },
-                                      @"paymentCurrencies": @{
-                                              @"type": @"object",
-                                              @"required": @NO
-                                              }
-                                      };
 
-    for(id key in propDefinitions) {
-        if(options[key]) {
-            opts[key] = options[key];
-        }
+    if(options.apiKey != nil) {
+        opts[@"apiKey"] = options.apiKey;
     }
-
+    
+    if(options.env != nil) {
+        opts[@"env"] = options.env;
+    }
+    
+    if(options.email != nil) {
+        opts[@"email"] = options.email;
+    }
+    
+    if(options.paymentCurrencies != nil) {
+        opts[@"paymentCurrencies"] = options.paymentCurrencies;
+    }
+    
     opts[@"platform"] = @{
         @"appName": [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleNameKey],
         @"appId": [[NSBundle mainBundle] bundleIdentifier],
@@ -61,21 +53,21 @@
     };
 
     NSString *widgetUrl = urls[defaultEnv];
-    if(options[@"url"]) {
-        widgetUrl = options[@"url"];
+    if(options.url != nil) {
+        widgetUrl = options.url;
     } else if(opts[@"env"] && urls[opts[@"env"]]) {
         widgetUrl = urls[opts[@"env"]];
     }
     
-    if(options[@"paymentType"]) {
-        NSString *paymentTypeAsString = [paymentTypeStrings objectForKey:options[@"paymentType"]];
+    if(options.paymentType) {
+        NSString *paymentTypeAsString = [paymentTypeStrings objectForKey:@(options.paymentType)];
         opts[@"paymentType"] = paymentTypeAsString;
         NSLog(@"%@", paymentTypeAsString);
     } else {
         opts[@"paymentType"] = [paymentTypeStrings objectForKey:@(BidaliPaymentTypePrefill)];
     }
 
-    BidaliWebViewController *webViewController = [[BidaliWebViewController alloc] initWithOptions:opts url:widgetUrl onPaymentRequest:onPaymentRequest];
+    BidaliWebViewController *webViewController = [[BidaliWebViewController alloc] initWithOptions:opts url:widgetUrl onPaymentRequest:options.onPaymentRequest];
     [controller presentViewController:webViewController animated:true completion:nil];
 }
 

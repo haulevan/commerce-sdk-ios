@@ -128,6 +128,8 @@
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     self.webView.hidden = NO;
     self.loadingWebView.hidden = YES;
+    self.closeButton.hidden = YES;
+    [self.view sendSubviewToBack:self.closeButton];
 }
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(nonnull NSError *)error {

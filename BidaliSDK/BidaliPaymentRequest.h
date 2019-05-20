@@ -9,5 +9,5 @@
 @property (strong, nonatomic) NSString* extraId;
 @property (strong, nonatomic) NSString* extraIdName;
 
-+ (BidaliPaymentRequest *)requestWithDictionary:(NSDictionary*)dictionary;
++ (instancetype)requestWithDictionary:(NSDictionary*)dictionary;
 @end
