@@ -13,7 +13,7 @@
 }
 
 - (void)show:(UIViewController *)controller options:(BidaliSDKOptions *)options {
-    NSDictionary *paymentTypeStrings = @{
+    NSDictionary *paymentTypeStrings = @{   
       @(BidaliPaymentTypeApi) : @"api",
       @(BidaliPaymentTypeManual) : @"manual",
       @(BidaliPaymentTypePrefill) : @"prefill",
@@ -62,7 +62,6 @@
     if(options.paymentType) {
         NSString *paymentTypeAsString = [paymentTypeStrings objectForKey:@(options.paymentType)];
         opts[@"paymentType"] = paymentTypeAsString;
-        NSLog(@"%@", paymentTypeAsString);
     } else {
         opts[@"paymentType"] = [paymentTypeStrings objectForKey:@(BidaliPaymentTypePrefill)];
     }

@@ -17,6 +17,11 @@
     return self;
 }
 
++ (instancetype)requestWithDictionary:(NSDictionary *)dictionary {
+    BidaliPaymentRequest *paymentRequest = [[BidaliPaymentRequest alloc] initWithDictionary:dictionary];
+    return paymentRequest;
+}
+
 - (NSString *)description {
     return [NSString stringWithFormat:@"amount: %@\ncurrency:%@\naddress:%@\nchargeId:%@\nchargeDescription:%@\nextraIdName:%@\nextraId:%@", self.amount, self.currency, self.address, self.chargeId, self.chargeDescription, self.extraIdName, self.extraId];
 }
@@ -30,11 +35,5 @@
     self.extraId = nil;
     self.extraIdName = nil;
 }
-
-+ (instancetype)requestWithDictionary:(NSDictionary *)dictionary {
-    BidaliPaymentRequest *paymentRequest = [[BidaliPaymentRequest alloc] initWithDictionary:dictionary];
-    return paymentRequest;
-}
-
 
 @end
