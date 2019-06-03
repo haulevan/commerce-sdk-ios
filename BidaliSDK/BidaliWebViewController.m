@@ -62,12 +62,14 @@
     if(self.onPaymentRequest) {
         [_bridge registerHandler:@"onPaymentRequest" handler:^(id data, WVJBResponseCallback responseCallback) {
             BidaliPaymentRequest *paymentRequest = [BidaliPaymentRequest requestWithDictionary:(NSDictionary*)data];
-            self.onPaymentRequest(paymentRequest);
+            [self close:^{
+                self.onPaymentRequest(paymentRequest);
+            }];
             responseCallback(data);
         }];
     }
     [_bridge registerHandler:@"onClose" handler:^(id data, WVJBResponseCallback responseCallback) {
-        [self close];
+        [self close:nil];
         responseCallback(@"Response from onClose");
     }];
     
@@ -117,8 +119,8 @@
     [self setupBridge];
 }
 
-- (void) close {
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (void) close:(void (^ __nullable)(void))completion {
+    [self dismissViewControllerAnimated:YES completion:completion];
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
@@ -129,7 +131,7 @@
 }
 
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error {
-    [self close];
+    [self close:nil];
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(nonnull WKNavigationResponse *)navigationResponse decisionHandler:(nonnull void (^)(WKNavigationResponsePolicy))decisionHandler {
@@ -141,7 +143,7 @@
     }
     
     if (response.statusCode >= 400) {
-        [self close];
+        [self close:nil];
         return;
     }
     

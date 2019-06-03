@@ -37,8 +37,7 @@
 }
 
 - (void)defaultOptions {
-    BidaliSDKOptions *options = [BidaliSDKOptions optionsWithApiKey:@"12345"];
-    options.env = @"staging";
+    BidaliSDKOptions *options = [BidaliSDKOptions optionsWithApiKey:@"YOUR API KEY"];
     options.onPaymentRequest = ^(BidaliPaymentRequest *paymentRequest){
         [self showAlertForPaymentRequest:paymentRequest];
     };
@@ -46,10 +45,8 @@
 }
 
 - (void)btcOnly {
-    BidaliSDKOptions *options = [BidaliSDKOptions optionsWithApiKey:@"12345"];
-    options.env = @"staging";
+    BidaliSDKOptions *options = [BidaliSDKOptions optionsWithApiKey:@"YOUR API KEY"];
     options.paymentCurrencies = @[@"BTC"];
-    options.paymentType = BidaliPaymentTypeManual;
     options.onPaymentRequest = ^(BidaliPaymentRequest *paymentRequest){
         [self showAlertForPaymentRequest:paymentRequest];
     };
@@ -97,7 +94,7 @@
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * action) {
-                                                              [[BidaliSDK getInstance] close];
+                                                              
                                                           }];
     [alert addAction:defaultAction];
     [[self topMostController] presentViewController:alert animated:YES completion:nil];

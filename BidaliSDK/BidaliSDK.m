@@ -72,7 +72,7 @@
 
 - (void)close {
     if(self.webViewController) {
-        [self.webViewController close];
+        [self.webViewController close:nil];
     }
 }
 
