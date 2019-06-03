@@ -66,12 +66,18 @@
         opts[@"paymentType"] = [paymentTypeStrings objectForKey:@(BidaliPaymentTypePrefill)];
     }
 
-    BidaliWebViewController *webViewController = [[BidaliWebViewController alloc] initWithOptions:opts url:widgetUrl onPaymentRequest:options.onPaymentRequest];
-    [controller presentViewController:webViewController animated:true completion:nil];
+    self.webViewController = [[BidaliWebViewController alloc] initWithOptions:opts url:widgetUrl onPaymentRequest:options.onPaymentRequest];
+    [controller presentViewController:self.webViewController animated:true completion:nil];
 }
 
 - (void)close {
-    
+    if(self.webViewController) {
+        [self.webViewController close];
+    }
+}
+
+- (void)dealloc {
+    self.webViewController = nil;
 }
 
 @end

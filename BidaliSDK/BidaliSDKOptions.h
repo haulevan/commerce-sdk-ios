@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import "BidaliSDK.h"
+#import "BidaliPaymentRequest.h"
 
 typedef enum { BidaliPaymentTypeApi, BidaliPaymentTypeManual, BidaliPaymentTypePrefill  } BidaliPaymentType;
 typedef void (^BidaliOnPaymentRequestCallback)(BidaliPaymentRequest *paymentRequest);

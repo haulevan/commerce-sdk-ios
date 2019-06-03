@@ -6,7 +6,6 @@
 @property WebViewJavascriptBridge* bridge;
 @property WKWebView* loadingWebView;
 @property WKWebView* webView;
-//@property UIActivityIndicatorView *spinner;
 @property UIButton *closeButton;
 @property NSDictionary* options;
 @property NSString* url;
@@ -40,16 +39,17 @@
 
 - (void)setupCloseButton {
     self.closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.closeButton addTarget:self action:@selector(closePressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.closeButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    [self.closeButton setTitle:@"x" forState:UIControlStateNormal];
+    [self.closeButton addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
+    [self.closeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.closeButton setTitle:@"✕" forState:UIControlStateNormal];
+
     if (@available(iOS 8.2, *)) {
-        [self.closeButton.titleLabel setFont:[UIFont systemFontOfSize:20 weight:UIFontWeightBold]];
+        [self.closeButton.titleLabel setFont:[UIFont systemFontOfSize:22 weight:UIFontWeightBold]];
     } else {
         // Fallback on earlier versions
-        [self.closeButton.titleLabel setFont:[UIFont systemFontOfSize:20]];
+        [self.closeButton.titleLabel setFont:[UIFont boldSystemFontOfSize:22]];
     }
-    [self.closeButton setFrame:CGRectMake(self.view.frame.size.width - 40, 40, 40, 40)];
+    [self.closeButton setFrame:CGRectMake(4, 44, 40, 40)];
     [self.view addSubview:self.closeButton];
 }
 
@@ -67,7 +67,7 @@
         }];
     }
     [_bridge registerHandler:@"onClose" handler:^(id data, WVJBResponseCallback responseCallback) {
-        [self closePressed];
+        [self close];
         responseCallback(@"Response from onClose");
     }];
     
@@ -117,12 +117,8 @@
     [self setupBridge];
 }
 
-- (void) closePressed {
+- (void) close {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
-    
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
@@ -132,9 +128,24 @@
     [self.view sendSubviewToBack:self.closeButton];
 }
 
-- (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(nonnull NSError *)error {
-    NSLog(@"webViewDidFinishLoad: %@", error);
-    //TODO: Handle this error and show error message with ability to close widget.
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+    [self close];
+}
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(nonnull WKNavigationResponse *)navigationResponse decisionHandler:(nonnull void (^)(WKNavigationResponsePolicy))decisionHandler {
+    
+    NSHTTPURLResponse* response = (NSHTTPURLResponse *)navigationResponse.response;
+    if(!response.statusCode) {
+        decisionHandler(WKNavigationResponsePolicyAllow);
+        return;
+    }
+    
+    if (response.statusCode >= 400) {
+        [self close];
+        return;
+    }
+    
+    decisionHandler(WKNavigationResponsePolicyAllow);
 }
 
 @end

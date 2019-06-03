@@ -96,7 +96,9 @@
                                                             preferredStyle:UIAlertControllerStyleActionSheet];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {}];
+                                                          handler:^(UIAlertAction * action) {
+                                                              [[BidaliSDK getInstance] close];
+                                                          }];
     [alert addAction:defaultAction];
     [[self topMostController] presentViewController:alert animated:YES completion:nil];
 }
