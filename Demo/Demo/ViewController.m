@@ -49,7 +49,7 @@
     BidaliSDKOptions *options = [BidaliSDKOptions optionsWithApiKey:@"12345"];
     options.env = @"staging";
     options.paymentCurrencies = @[@"BTC"];
-    options.paymentType = BidaliPaymentTypeManual;
+    options.defaultCountry = @"CA";
     options.onPaymentRequest = ^(BidaliPaymentRequest *paymentRequest){
         [self showAlertForPaymentRequest:paymentRequest];
     };
