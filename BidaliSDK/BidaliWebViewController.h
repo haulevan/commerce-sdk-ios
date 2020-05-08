@@ -4,6 +4,6 @@
 
 @interface BidaliWebViewController : UIViewController <WKNavigationDelegate>
 -(id)initWithOptions:(NSDictionary*)options url:(NSString*)url onPaymentRequest:(BidaliOnPaymentRequestCallback)onPaymentRequest;
--(void)close;
+-(void)close:(void (^ __nullable)(void))completion;
 @end
 
