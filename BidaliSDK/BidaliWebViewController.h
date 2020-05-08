@@ -3,7 +3,7 @@
 #import "BidaliSDKOptions.h"
 
 @interface BidaliWebViewController : UIViewController <WKNavigationDelegate>
--(id)initWithOptions:(NSDictionary*)options url:(NSString*)url onPaymentRequest:(BidaliOnPaymentRequestCallback)onPaymentRequest;
+-(id _Nonnull )initWithOptions:(NSDictionary*_Nonnull)options url:(NSString*_Nonnull)url onPaymentRequest:(BidaliOnPaymentRequestCallback _Nullable)onPaymentRequest;
 -(void)close:(void (^ __nullable)(void))completion;
 @end
 
