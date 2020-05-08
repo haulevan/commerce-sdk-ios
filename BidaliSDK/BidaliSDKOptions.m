@@ -17,6 +17,7 @@
     self.url = nil;
     self.email = nil;
     self.paymentCurrencies = nil;
+    self.defaultCountry = nil;
     self.onPaymentRequest = nil;
 }
 

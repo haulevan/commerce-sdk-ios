@@ -47,6 +47,7 @@
 - (void)btcOnly {
     BidaliSDKOptions *options = [BidaliSDKOptions optionsWithApiKey:@"YOUR API KEY"];
     options.paymentCurrencies = @[@"BTC"];
+    options.defaultCountry = @"CA";
     options.onPaymentRequest = ^(BidaliPaymentRequest *paymentRequest){
         [self showAlertForPaymentRequest:paymentRequest];
     };

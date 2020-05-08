@@ -42,6 +42,10 @@
         opts[@"paymentCurrencies"] = options.paymentCurrencies;
     }
     
+    if(options.defaultCountry != nil) {
+        opts[@"defaultCountry"] = options.defaultCountry;
+    }
+    
     opts[@"platform"] = @{
         @"appName": [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleNameKey],
         @"appId": [[NSBundle mainBundle] bundleIdentifier],
