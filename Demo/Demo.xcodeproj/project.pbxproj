@@ -71,8 +71,8 @@
 				2F5677C321F293F200DB67B1 /* ViewController.m */,
 				2F5677C521F293F200DB67B1 /* Main.storyboard */,
 				2F5677C821F293F400DB67B1 /* Assets.xcassets */,
-				2F5677CA21F293F400DB67B1 /* LaunchScreen.storyboard */,
 				2F5677CD21F293F400DB67B1 /* Info.plist */,
+				2F5677CA21F293F400DB67B1 /* LaunchScreen.storyboard */,
 				2F5677CE21F293F400DB67B1 /* main.m */,
 			);
 			path = Demo;

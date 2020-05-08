@@ -11,7 +11,6 @@ Pod::Spec.new do |s|
   s.source           = { git: "https://github.com/bidalihq/commerce-ios-sdk.git", tag: s.version.to_s }
   s.platform         = :ios, '8.0'
   s.requires_arc     = true
-  s.dependency       "WebViewJavascriptBridge", "~> 6.0"
   s.source_files 	 = "BidaliSDK/*.{h,m}"
   s.frameworks 		 = "UIKit", "WebKit"
 end
