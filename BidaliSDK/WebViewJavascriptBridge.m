@@ -46,7 +46,9 @@
 #endif
     if ([webView isKindOfClass:[WVJB_WEBVIEW_TYPE class]]) {
         WebViewJavascriptBridge* bridge = [[self alloc] init];
+#if defined WVJB_PLATFORM_OSX
         [bridge _platformSpecificSetup:webView];
+#endif
         return bridge;
     }
     [NSException raise:@"BadWebViewType" format:@"Unknown web view type."];
@@ -90,7 +92,9 @@
 }
 
 
-/* Platform agnostic internals
+
+#if defined WVJB_PLATFORM_OSX
+/* Platform agnostic internals: OSX
  *****************************/
 
 - (void)dealloc {
@@ -99,14 +103,6 @@
     _webView = nil;
     _webViewDelegate = nil;
 }
-
-- (NSString*) _evaluateJavascript:(NSString*)javascriptCommand {
-    return [_webView stringByEvaluatingJavaScriptFromString:javascriptCommand];
-}
-
-#if defined WVJB_PLATFORM_OSX
-/* Platform specific internals: OSX
- **********************************/
 
 - (void) _platformSpecificSetup:(WVJB_WEBVIEW_TYPE*)webView {
     _webView = webView;
@@ -117,6 +113,10 @@
 
 - (void) _platformSpecificDealloc {
     _webView.policyDelegate = nil;
+}
+
+- (NSString*) _evaluateJavascript:(NSString*)javascriptCommand {
+    return [_webView stringByEvaluatingJavaScriptFromString:javascriptCommand];
 }
 
 - (void)webView:(WebView *)webView decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(WebFrame *)frame decisionListener:(id<WebPolicyDecisionListener>)listener {
@@ -137,72 +137,6 @@
         [_webViewDelegate webView:webView decidePolicyForNavigationAction:actionInformation request:request frame:frame decisionListener:listener];
     } else {
         [listener use];
-    }
-}
-
-
-
-#elif defined WVJB_PLATFORM_IOS
-/* Platform specific internals: iOS
- **********************************/
-
-- (void) _platformSpecificSetup:(WVJB_WEBVIEW_TYPE*)webView {
-    _webView = webView;
-    _webView.delegate = self;
-    _base = [[WebViewJavascriptBridgeBase alloc] init];
-    _base.delegate = self;
-}
-
-- (void) _platformSpecificDealloc {
-    _webView.delegate = nil;
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    if (webView != _webView) { return; }
-    
-    __strong WVJB_WEBVIEW_DELEGATE_TYPE* strongDelegate = _webViewDelegate;
-    if (strongDelegate && [strongDelegate respondsToSelector:@selector(webViewDidFinishLoad:)]) {
-        [strongDelegate webViewDidFinishLoad:webView];
-    }
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    if (webView != _webView) { return; }
-    
-    __strong WVJB_WEBVIEW_DELEGATE_TYPE* strongDelegate = _webViewDelegate;
-    if (strongDelegate && [strongDelegate respondsToSelector:@selector(webView:didFailLoadWithError:)]) {
-        [strongDelegate webView:webView didFailLoadWithError:error];
-    }
-}
-
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    if (webView != _webView) { return YES; }
-    
-    NSURL *url = [request URL];
-    __strong WVJB_WEBVIEW_DELEGATE_TYPE* strongDelegate = _webViewDelegate;
-    if ([_base isWebViewJavascriptBridgeURL:url]) {
-        if ([_base isBridgeLoadedURL:url]) {
-            [_base injectJavascriptFile];
-        } else if ([_base isQueueMessageURL:url]) {
-            NSString *messageQueueString = [self _evaluateJavascript:[_base webViewJavascriptFetchQueyCommand]];
-            [_base flushMessageQueue:messageQueueString];
-        } else {
-            [_base logUnkownMessage:url];
-        }
-        return NO;
-    } else if (strongDelegate && [strongDelegate respondsToSelector:@selector(webView:shouldStartLoadWithRequest:navigationType:)]) {
-        return [strongDelegate webView:webView shouldStartLoadWithRequest:request navigationType:navigationType];
-    } else {
-        return YES;
-    }
-}
-
-- (void)webViewDidStartLoad:(UIWebView *)webView {
-    if (webView != _webView) { return; }
-    
-    __strong WVJB_WEBVIEW_DELEGATE_TYPE* strongDelegate = _webViewDelegate;
-    if (strongDelegate && [strongDelegate respondsToSelector:@selector(webViewDidStartLoad:)]) {
-        [strongDelegate webViewDidStartLoad:webView];
     }
 }
 
