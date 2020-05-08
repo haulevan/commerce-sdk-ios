@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Bidali-iOS-SDK"
-  s.version          = "0.0.2"
+  s.version          = "0.0.3"
   s.summary          = "Drop in Commerce SDK"
   s.description      = <<-DESC
   	This SDK enables cryptocurrency wallets to allow users to purchase in-app.
