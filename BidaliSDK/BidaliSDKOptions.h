@@ -12,6 +12,7 @@ typedef void (^BidaliOnPaymentRequestCallback)(BidaliPaymentRequest *paymentRequ
 @property (strong, nonatomic) NSString* email;
 @property (assign, nonatomic) BidaliPaymentType paymentType;
 @property (strong, nonatomic) NSArray* paymentCurrencies;
+@property (strong, nonatomic) NSString* defaultCountry;
 @property (strong, nonatomic) BidaliOnPaymentRequestCallback onPaymentRequest;
 + (instancetype)optionsWithApiKey:(NSString*)apiKey;
 @end
