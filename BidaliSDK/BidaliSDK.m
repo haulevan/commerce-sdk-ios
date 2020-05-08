@@ -67,7 +67,9 @@
     }
 
     self.webViewController = [[BidaliWebViewController alloc] initWithOptions:opts url:widgetUrl onPaymentRequest:options.onPaymentRequest];
-    [controller presentViewController:self.webViewController animated:true completion:nil];
+    self.webViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    [controller presentViewController:self.webViewController
+                             animated:true completion:nil];
 }
 
 - (void)close {
