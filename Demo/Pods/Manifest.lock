@@ -1,5 +1,5 @@
 PODS:
-  - Bidali-iOS-SDK (0.0.3)
+  - Bidali-iOS-SDK (0.0.4)
 
 DEPENDENCIES:
   - Bidali-iOS-SDK (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Bidali-iOS-SDK: cc0db4b3a5192102f6eb5cb8d91360f0fa561cc9
+  Bidali-iOS-SDK: 9b76902d9fd69a61c3e32ceb75b35f7bb41a6c54
 
 PODFILE CHECKSUM: 9879606f83353087bb4360d729e258c1e4794aac
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.10.0

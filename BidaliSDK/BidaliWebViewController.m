@@ -39,7 +39,7 @@
 
 - (void)setupCloseButton {
     self.closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.closeButton addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
+    [self.closeButton addTarget:self action:@selector(closeNow) forControlEvents:UIControlEventTouchUpInside];
     [self.closeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.closeButton setTitle:@"✕" forState:UIControlStateNormal];
 
@@ -148,6 +148,10 @@
     }
     
     decisionHandler(WKNavigationResponsePolicyAllow);
+}
+
+- (void)closeNow {
+    [self close:nil];
 }
 
 @end

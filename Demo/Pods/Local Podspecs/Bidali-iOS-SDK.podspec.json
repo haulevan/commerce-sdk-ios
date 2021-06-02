@@ -1,6 +1,6 @@
 {
   "name": "Bidali-iOS-SDK",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "summary": "Drop in Commerce SDK",
   "description": "This SDK enables cryptocurrency wallets to allow users to purchase in-app.",
   "homepage": "https://bidali.com",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/bidalihq/commerce-ios-sdk.git",
-    "tag": "0.0.3"
+    "tag": "0.0.4"
   },
   "platforms": {
     "ios": "8.0"
