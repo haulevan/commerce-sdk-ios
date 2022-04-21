@@ -144,6 +144,7 @@
     
     if (response.statusCode >= 400) {
         [self close:nil];
+        decisionHandler(WKNavigationResponsePolicyCancel);
         return;
     }
     
